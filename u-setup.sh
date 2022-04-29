@@ -1,7 +1,9 @@
 sudo apt update
-curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 
-sudo apt install -y zsh wget curl build-essential python3-pip python3 nodejs tmux
+sudo apt install -y zsh wget curl build-essential python3-pip python3 tmux git
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt install -y nodejs 
+
 
 cp .tmux.conf ~/.tmux.conf
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
