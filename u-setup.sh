@@ -11,13 +11,16 @@ bash ~/.tmux/plugins/tpm/bin/install_plugins
 #install zsh
 echo "y" | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# install rust du exa sd
 sh -c "$(curl -fsSL https://sh.rustup.rs)"
-cargo install du-dust exa sd
+cargo install du-dust exa sd fd-find
 wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.deb
 sudo dpkg -i nvim-linux64.deb
 cp .zshrc ~/.zshrc
 
+# install lunarvim
+npm install -g yarn
 yarn config set proxy $http_proxy
 yarn config set https-proxy $https_proxy
-npm install -g yarn
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) --install-dependencies -y
