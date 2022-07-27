@@ -104,7 +104,7 @@ alias t="tmux a"
 alias l="exa -l -a"
 alias ll="exa -l"
 alias lv="lvim"
-alias rs="rocmsmi"
+alias rs="rocm-smi"
 
 
 export TERM=xterm-256color

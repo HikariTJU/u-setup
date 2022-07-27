@@ -22,7 +22,8 @@ sudo dpkg -i nvim-linux64.deb
 cp .zshrc ~/.zshrc
 
 # install lunarvim
-npm install -g yarn
+npm install --location=global yarn
 yarn config set proxy $http_proxy
 yarn config set https-proxy $https_proxy
-bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) --install-dependencies -y
+bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+zsh
