@@ -104,14 +104,11 @@ alias t="tmux a"
 alias l="exa -l -a"
 alias ll="exa -l"
 alias lv="lvim"
+alias rs="rocmsmi"
 
 
 export TERM=xterm-256color
 
 export CUDA_HOME="/usr/local/cuda"
 
-function ml() {
-    nvidia-docker run --rm -ti -w $PWD -v $HOME/.zsh_history:/root/.zsh_history -v /etc:/etc -v $HOME:$HOME --cap-add SYS_ADMIN -e NVIDIA_MIG_CONFIG_DEVICES="all" --gpus device=$1 --name mlperf2.0-d$1 -e MLPERF_SCRATCH_PATH=/data/mlperf_v1.1_scratch -e PREPROCESSED_DATA_DIR=/data/mlperf_v1.1_scratch/preprocessed_data -v /data:/data -v /opt:/opt -v /usr/local/cuda:/usr/local/cuda mlperf-inference:$USER-x86_64
-}
-export PATH=$HOME/.local/bin/:$HOME/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/ssl/bin:/usr/local/cuda/bin:/data/$USER/TensorRT-8.2.2.1/bin
-
+export PATH=$HOME/.local/bin/:$HOME/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/ssl/bin:/usr/local/cuda/bin

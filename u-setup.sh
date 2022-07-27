@@ -14,6 +14,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 # install rust du exa sd
 sh -c "$(curl -fsSL https://sh.rustup.rs)"
+source ~/.cargo/env
+
 cargo install du-dust exa sd fd-find
 wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.deb
 sudo dpkg -i nvim-linux64.deb
