@@ -20,7 +20,9 @@ cargo install du-dust exa sd fd-find
 wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.deb
 sudo dpkg -i nvim-linux64.deb
 cp .zshrc ~/.zshrc
-
+# install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 # install lunarvim
 npm install --location=global yarn
 yarn config set proxy $http_proxy
