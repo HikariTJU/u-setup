@@ -1,8 +1,6 @@
 sudo apt update
 
 sudo apt install -y zsh wget curl build-essential python3-pip python3 tmux git
-curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-sudo apt install -y nodejs 
 
 
 cp .tmux.conf ~/.tmux.conf
@@ -20,13 +18,13 @@ source ~/.cargo/env
 cargo install du-dust exa sd fd-find
 wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.deb
 sudo dpkg -i nvim-linux64.deb
+wget https://github.com/dandavison/delta/releases/download/0.14.0/git-delta_0.14.0_amd64.deb
+sudo dpkg -i git-delta_0.14.0_amd64.deb
+cat .gitconfig >> ~/.gitconfig
 cp .zshrc ~/.zshrc
 # install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 # install lunarvim
-npm install --location=global yarn
-yarn config set proxy $http_proxy
-yarn config set https-proxy $https_proxy
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
 zsh

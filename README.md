@@ -1,5 +1,7 @@
 # u-setup
+
 A script that installs:
+
 + zsh, zsh-autosuggestions
 + tmux
 + LunarVim
@@ -9,6 +11,5 @@ A script that installs:
 + fd
 + yarn
 + rust
-+ NodeJS
-  
+
 Works on Ubuntu 18.04 and above
